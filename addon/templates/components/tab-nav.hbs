@@ -1,0 +1,9 @@
+<ul class="nav nav-tabs">
+  {{#each tabs as |tab|}}
+    <li role="presentation" class={{if (eq tab selectedTab) "active"}}>
+      <a href="#" {{action "selectTab" tab}}>{{tab.title}}</a>
+    </li>
+  {{/each}}
+</ul>
+
+{{component selectedTab.content}}
