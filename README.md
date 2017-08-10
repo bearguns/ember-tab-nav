@@ -13,24 +13,25 @@ This README outlines the details of collaborating on this Ember addon.
 
 - Add this repository to your downstream project's package.json: `git+ssh://git@github.com/teliax/ember-tab-nav.git#v0.0.2`
 - `npm i` or `yarn` in your downstream project to pull down the code.
+- Install Bootstrap for styling, or write your own styles targeting the `nav` and `nav-tabs` classes.
 
 ## Usage
 
 ```
 {{tab-nav tabs=(array
-  (safe-hash
+  (hash
     title="first Tab"
-    content=(component 'first-component'
+    content=(component "first-component"
       data=model.first)
   )
-  (safe-hash
+  (hash
     title="second Tab"
-    content=(component 'second-component'
+    content=(component "second-component"
       data=model.second)
   )
-  (safe-hash
+  (hash
     title="third Tab"
-    content=(component 'third-component'
+    content=(component "third-component"
       data=model.third)
   )
 )}}

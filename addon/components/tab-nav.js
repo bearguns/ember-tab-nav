@@ -13,7 +13,7 @@ export default Ember.Component.extend({
     set(key, value) {
       this.set('_tabs', value);
       if (value) {
-        this.set('selectedTab', value.objectAt(0));
+        this.set('selectedTab', value[0]);
       } else {
         this.set('selectedTab', null);
       }
