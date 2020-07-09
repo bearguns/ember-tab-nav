@@ -1,55 +1,38 @@
-# tab-nav
+tab-nav
+==============================================================================
 
-This README outlines the details of collaborating on this Ember addon.
+[Short description of the addon.]
 
-## Installation
 
-* `git clone <repository-url>` this repository
-* `cd tab-nav`
-* `npm install`
-* `bower install`
+Compatibility
+------------------------------------------------------------------------------
 
-## Installation as Addon
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
 
-- Add this repository to your downstream project's package.json: `git+ssh://git@github.com/teliax/ember-tab-nav.git#v0.0.2`
-- `npm i` or `yarn` in your downstream project to pull down the code.
-- Install Bootstrap for styling, or write your own styles targeting the `nav` and `nav-tabs` classes.
 
-## Usage
+Installation
+------------------------------------------------------------------------------
 
 ```
-{{tab-nav tabs=(array
-  (hash
-    title="first Tab"
-    content=(component "first-component"
-      data=model.first)
-  )
-  (hash
-    title="second Tab"
-    content=(component "second-component"
-      data=model.second)
-  )
-  (hash
-    title="third Tab"
-    content=(component "third-component"
-      data=model.third)
-  )
-)}}
+ember install tab-nav
 ```
 
-## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Usage
+------------------------------------------------------------------------------
 
-## Running Tests
+[Longer description of how to use the addon in apps.]
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
 
-## Building
+Contributing
+------------------------------------------------------------------------------
 
-* `ember build`
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
