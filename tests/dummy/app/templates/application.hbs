@@ -1,16 +1,4 @@
-{{outlet}}
-
-{{tab-nav tabs=(array
-  (hash
-    title="first Tab"
-    content=(component "first-component")
-  )
-  (hash
-    title="second Tab"
-    content=(component "second-component")
-  )
-  (hash
-    title="third Tab"
-    content=(component "third-component")
-  )
-)}}
+<TabNav @tabs={{array
+                  (hash title="First Component" content="first-component")
+                  (hash title="Second Component" content="second-component")
+                  (hash title="Third Component" content="third-component") }}/>

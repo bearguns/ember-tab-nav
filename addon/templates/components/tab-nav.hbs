@@ -1,9 +1,9 @@
 <ul class="nav nav-tabs">
-  {{#each tabs as |tab|}}
-    <li role="presentation" class={{if (eq tab selectedTab) "active"}}>
-      <a href="#" {{action "selectTab" tab}}>{{tab.title}}</a>
+  {{#each this.tabs as |tab|}}
+    <li class={{if (eq tab this.selectedTab) "active"}}>
+      <a href="#" {{on "click" (fn this.selectTab tab)}}>{{tab.title}}</a>
     </li>
   {{/each}}
 </ul>
 
-{{component selectedTab.content}}
+{{component this.selectedTab.content}}

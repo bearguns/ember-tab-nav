@@ -1,33 +1,17 @@
-import Ember from 'ember';
+import { set, action } from '@ember/object';
+import Component from '@ember/component';
 import layout from '../templates/components/tab-nav';
 
 /**
  * Component that renders a list of tabs, and changes views based on the
  * selected tab.
- * @prop tabs {Array} The tabs to render: { title (string), content (component).
+ * @prop tabs {Array} The tabs to render: { title (string), content (component) }.
  */
-export default Ember.Component.extend({
-  layout,
+export default class TabsComponent extends Component {
+  layout = layout;
 
-  tabs: Ember.computed({
-    set(key, value) {
-      this.set('_tabs', value);
-      if (value) {
-        this.set('selectedTab', value[0]);
-      } else {
-        this.set('selectedTab', null);
-      }
-
-      return value;
-    },
-    get() {
-      return this.get('_tabs');
-    }
-  }),
-
-  actions: {
-    selectTab(tab) {
-      this.set('selectedTab', tab);
-    }
+  @action
+  selectTab(value) {
+    set(this, 'selectedTab', value);
   }
-});
+}

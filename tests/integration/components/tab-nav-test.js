@@ -14,7 +14,7 @@ describe('Integration | Component | tab nav', function() {
       (safe-hash title="first" content=(component "dummy-component"))
       (safe-hash title="second" content=(component "dummy-component"))
     )}}`);
-    expect(this.$('li')).to.have.length(2);
+    expect(document.querySelectorAll('li')).to.have.length(2);
   });
 
   it('switches views when a tab is clicked', function() {
@@ -23,8 +23,8 @@ describe('Integration | Component | tab nav', function() {
       (safe-hash title="first" content=(component "dummy-component" content="first"))
       (safe-hash title="second" content=(component "dummy-component" content="second"))
     )}}`);
-    expect(this.$('#content').text()).to.contain('first');
-    this.$('a')[1].click();
-    expect(this.$('#content').text()).to.contain('second');
+    expect(document.querySelector('#content').text()).to.contain('first');
+    document.querySelector('a').click();
+    expect(document.querySelector('#content').text()).to.contain('second');
   });
 });
